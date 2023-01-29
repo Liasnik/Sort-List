@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SORT_LIST</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h4>LIST SORTING</h4>
+        <hr>
+
+        <div>
+            <p> Введи ключевые слова сюда:</p>
+                <input type="text" class="text-3"  name="" >
+                <!-- <input type="text" class="text-3-2"  name="" value="****">
+                <input type="text" class="text-3-3"  name="" value="****">
+                <input type="text" class="text-3-4"  name="" value="****">
+                <input type="text" class="text-3-5"  name="" value="****">
+                <input type="text" class="text-3-6"  name="" value="****">
+                <input type="text" class="text-3-7"  name="" value="****">
+                <input type="text" class="text-3-8"  name="" value="****">
+                <input type="text" class="text-3-9"  name="" value="****">
+                <input type="text" class="text-3-10"  name="" value="****">
+                <input type="text" class="text-3-11"  name="" value="****">
+                <input type="text" class="text-3-12"  name="" value="****">
+                <input type="text" class="text-3-13"  name="" value="****">
+                <input type="text" class="text-3-14"  name="" value="****">        -->
+        </div>
+
+        <div>
+            <div class="block" > 
+                <label for="" class="label1">Вставь список из Excel сюда:</label>
+                <textarea name="" class="text-1" id="" cols="50" rows="9" ></textarea>
+                <button class="butt-1" id="btn">ONE KEYWORD TWO AREAS</button> 
+            </div>
+
+        
+
+            <div class="block">
+                <label for="" class="label1">Данные  с ключевым  словом:</label>
+                <textarea name="" class="text-2" id=""cols="50" rows="9" autofocus></textarea>
+                <button class="butt-2" id="btn">ALL WITH KEYWORDS</button> 
+            </div>
+
+            <div class="block"> 
+                <label for="" class="labl1"></label>Данные без ключевого слова:</label>
+                <textarea name="" class="text-4" id=""cols="50" rows="9" autofocus></textarea>
+                <button class="butt-4" id="btn">ONE WITHOUT KEYWORD</button> 
+            </div>
+        </div>
+
+        <hr>
+        
+        <div>
+            <p class="text-5">ONE KEYWORD TWO AREAS:
+           добавляет в поле "Данные с ключевым  словом" данные, включающие
+            точные значения конкретных отдельных ячеек таблицы Excel по полному значению, записаному 
+            в ячейке либо по окончанию этих значений. И одновременно вставляет входящий список
+            без этих данных в поле "Данные без ключевого слова". Для такой же сортировки по
+            крайнему правому столбцу нужно копировать данные из таблицы вместе со
+            следующим пустым столбцом. <br>
+             При каждом нажатии этой кнопки данные в поле "Данные с ключевым  словом"
+            плюсуются. В поле "Данные без ключевого слова" - перезаписываются.</p>
+
+        <p class="text-6"> ALL WITH KEYWORDS: вставляет данные содержащие все ключи в поле 
+            "Данные  с ключевым  словом"</p> 
+        <p class="text-6">  ONE WITHOUT KEYWORD: выводит список без данных, содержащих один
+            проверочный ключ в поле "Данные без ключевого слова". (Эта функция временно недоступна. Работает
+            как предыдущая кнопка).
+        </p>
+
+        <p class="text-7">Все кнопки выводят только уникальные строки, исключая дубликаты, имеющие 
+            полное совпадение по всей строке. <br> С незаполненными полями для ввода
+            ключей выводится просто весь список, исключая дубликаты.
+        </p>
+        </div>
+
+        <footer><h3 class="h4">LIST SORTING</h3></footer>
+    
+        <script src="main.js"></script>
+
+    </body>
+</html>
