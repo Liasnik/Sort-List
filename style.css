@@ -11,14 +11,19 @@ body {
 
 button {
     cursor: pointer;
-    border: none;
     font-size: 0.9rem;
-    font-weight: 700;
-   
+    font-weight: 700;  
      -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-    cursor: pointer;
+     -webkit-text-fill-color: transparent;   
     transition: 0.4s;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 5px;
+   box-shadow: 3px 2px 2px #67848f;
+}
+
+button:active {   
+    box-shadow: 1px 1px 1px #67848f;
 }
 
 button:hover {
@@ -29,14 +34,20 @@ button:active {
     opacity: 0.6;
 } 
 
-.butt-1-1 {
-    
+.butt-1-1 {   
     background-image: linear-gradient(to right, rgb(213, 66, 8),
     rgb(249, 73, 3));
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
+     border: 1px solid gray;
+     border-radius: 4px;
+     padding: 5px;
+    box-shadow: 2px 2px 2px #67848f;
 }
 
+.butt-1-1:active {   
+    box-shadow: 1px 1px #67848f;
+}
 .butt-1 {  
     color: rgb(1, 71, 30);
     font-size: 0.9rem;
@@ -45,10 +56,12 @@ button:active {
     #06582e);
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
+     border: 1px solid gray;
+     padding: 5px;
+     transition: 0.4s;
 }
 
 .butt-3-repl {
-    border: none;
     color: #a5231a;
     font-size: 0.9rem;
     font-weight: 700;
