@@ -1,0 +1,128 @@
+input {
+    float:inline-start;    
+    margin-bottom: 5px;
+}
+
+body {
+    height: 100vh;
+    padding: 5px;
+    background: #b5c6cc 100%;
+}
+
+button {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;  
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;   
+    transition: 0.4s;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 5px;
+   box-shadow: 3px 2px 2px #67848f;
+}
+
+button:active {   
+    box-shadow: 1px 1px 1px #67848f;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:active {
+    opacity: 0.6;
+} 
+
+.butt-1-1 {   
+    background-image: linear-gradient(to right, rgb(213, 66, 8),
+    rgb(249, 73, 3));
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     border: 1px solid gray;
+     border-radius: 4px;
+     padding: 5px;
+    box-shadow: 2px 2px 2px #67848f;
+}
+
+.butt-1-1:active {   
+    box-shadow: 1px 1px #67848f;
+}
+.butt-1 {  
+    color: rgb(1, 71, 30);
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #098143,
+    #06582e);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     border: 1px solid gray;
+     padding: 5px;
+     transition: 0.4s;
+}
+
+.butt-3-repl {
+    color: #a5231a;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #bd3025,
+    #076936);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     cursor: pointer;
+     transition: 0.4s;
+}
+
+.butt-2 {
+    background-image: linear-gradient(to right, rgb(20, 45, 157),
+    rgb(68, 100, 243));
+    
+}
+
+.butt-4 {
+    background-image: linear-gradient(to right, rgb(67, 96, 226),
+    rgb(20, 45, 157)); 
+  
+}
+
+#del{
+    background-image: linear-gradient(to right,#ff0505,
+    #d30606);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+
+.text-5_7 {
+    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+}
+
+.text-5_0 {
+    
+    color: rgba(228, 68, 5, 0.664);
+}
+
+.text-5 {
+    color: rgba(7, 122, 55, 0.856);
+}
+
+.text-6 {
+    color: rgba(36, 70, 221, 0.836);
+}
+
+.text-7 {
+    color: #263c44af
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: #67848f 100%;
+}
+
+.h3 {
+    color: #8ea8b1;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
