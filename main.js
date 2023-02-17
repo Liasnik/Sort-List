@@ -1,30 +1,33 @@
-const butt_replase = document.querySelector('.butt-3-repl');
+const butt_replase = document.querySelector('#btn-replace');
 butt_replase.addEventListener('click', replaceName);
 
-const button1_1 = document.querySelector('.butt-1-1');
-button1_1.addEventListener('click', myClick2_2);
-button1_1.addEventListener('click', myClick3_1);
+const button_two_areas = document.querySelector('#btn-two-areas');
+button_two_areas.addEventListener('click', splitList);
 
-const button1 = document.querySelector('.butt-1');
-button1.addEventListener('click', myClick);
+const button_strict_key = document.querySelector('#btn-strict-key');
+button_strict_key .addEventListener('click', strictSplit);
 
-const button2 = document.querySelector('.butt-2');
-button2.addEventListener('click', myClick2_2);
+const button_with_keywords= document.querySelector('#btn-with-keywords');
+button_with_keywords.addEventListener('click', createWithKeys);
 
-const button3 = document.querySelector('.butt-4');
-button3.addEventListener('click', myClick3_1);
+const button_without_keywords = document.querySelector('#btn-without-keywords');
+button_without_keywords.addEventListener('click', createWithoutKeys);
 
-const input = document.querySelector('.text-3');
-input.value = JSON.parse(localStorage.getItem('key'));
+const input_keywords = document.querySelector('#input-keywords');
+input_keywords.value = JSON.parse(localStorage.getItem('key'));
 
-const inputReplace = document.querySelector('.text-3-replace');
-inputReplace.value = JSON.parse(localStorage.getItem('key2'));
+const input_replace = document.querySelector('#input-replace');
+input_replace.value = JSON.parse(localStorage.getItem('key2'));
 
-const inList = document.querySelector('.text-1');
-inList.value = JSON.parse(localStorage.getItem('text'));
+const incoming_list = document.querySelector('#incoming-list');
+//incoming_list.value = JSON.parse(localStorage.getItem('text'));
+
+const areaWithKey = document.querySelector('#with-keywords');
+
+const areaWithoutKey =document.querySelector('#without-keywords');
 
 function arrKey() {
-    const keyWord = document.querySelector('.text-3').value;
+    const keyWord = input_keywords.value;
 
     if (!keyWord) {
         alert('Введи ключевые слова!');
@@ -39,9 +42,9 @@ function arrKey() {
 }
 
 function arrText() {
-    const inText = document.querySelector('.text-1').value;
+    const inText = incoming_list.value;
     
-    localStorage.setItem('text', JSON.stringify(inText));
+    //localStorage.setItem('text', JSON.stringify(inText));
 
     const arrayFromString = inText.split('\n');
     const uniqArr = [...new Set(arrayFromString)];
@@ -49,7 +52,7 @@ function arrText() {
      return uniqArr;
 }
 
-function myClick() {
+function strictSplit() {
     const arrayKeywords = arrKey(); 
     const uniqArray = arrText();
 
@@ -61,7 +64,7 @@ function myClick() {
 
      const listWith = newArray.join('\n'); 
      
-    document.querySelector('.text-2').value = `${listWith}\n` 
+     areaWithKey.value = `${listWith}\n`; 
 
     const newArray2 = uniqArray.filter(item => { 
         return !arrayKeywords.some(forbidden => {
@@ -71,10 +74,15 @@ function myClick() {
       
     const listWithout = newArray2.join('\n');
 
-     document.querySelector('.text-4').value = listWithout;
+    areaWithoutKey.value = listWithout;
 };
 
-function myClick2_2() {
+function splitList() {
+    createWithKeys();
+    createWithoutKeys(); 
+}
+
+function createWithKeys() {
     const arrayKeywords = arrKey(); 
     const uniqArray = arrText();
     
@@ -85,10 +93,10 @@ function myClick2_2() {
     });
         
      const listWithout = newArray.join('\n'); 
-     document.querySelector('.text-2').value = listWithout;
+     areaWithKey.value = listWithout;
 }
 
-function myClick3_1() {
+function createWithoutKeys() {
     const arrayKeywords = arrKey(); 
     const uniqArray = arrText();
 
@@ -99,38 +107,38 @@ function myClick3_1() {
     });
  
      const listWithout = newArrey.join('\n'); 
-     document.querySelector('.text-4').value = listWithout;
+     areaWithoutKey.value = listWithout;
 }
 
 function replaceName() {
     const arrayKeywords = arrKey(); 
     const uniqArray = arrText();
 
-    const newWord = document.querySelector('.text-3-replace').value;
+    const newValues = document.querySelector('#input-replace').value;
 
-    if (!newWord) {
+    if (!newValues) {
         alert('Введи ключевые слова!');
         return
     } 
     
-    localStorage.setItem('key2', JSON.stringify(newWord));
+    localStorage.setItem('key2', JSON.stringify(newValues));
     
-    const arrayNewWords = newWord.split(' ');
+    const arrayNewValues = newValues.split(' ');
 
-function replaceName(array, targetArr, replacementArr) {
-    for (let i = 0; i < targetArr.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-         array[j] = array[j].replace(`${targetArr[i]}\t`,
-          `${replacementArr[i]}\t`);
-        }
+    function replaceValues(array, targetArr, replacementArr) {
+        for (let i = 0; i < targetArr.length; i++) {
+            for (let j = 0; j < array.length; j++) {
+            array[j] = array[j].replace(`${targetArr[i]}\t`,
+            `${replacementArr[i]}\t`);
+            }
+        } 
+        return array;
     }
-    return array;
-}
 
-const newArr = replaceName(uniqArray, arrayKeywords, arrayNewWords);
-const newArray = newArr.join('\n');
+    const newArr = replaceValues(uniqArray, arrayKeywords, arrayNewValues);
+    const newArray = newArr.join('\n');
 
-    document.querySelector('.text-2').value = newArray;
+    document.querySelector('#with-keywords').value = newArray;
 }
 
 document.getElementById('del').onclick = function() {
