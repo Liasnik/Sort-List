@@ -10,33 +10,69 @@
     </head>
     <body>
         <div>
-            <p> Введи ключевые слова сюда:</p>
-                <input type="text" class="text-3"  name="" >
-                <button class="butt-3-repl" id="btn">REPLASE</button>
-                <input type="text" class="text-3-replace"  name="" > 
+            <label for="input-keywords" class="label1">
+                Введи ключевые слова сюда:
+            </label>
+            <br>
+            <input type="text" class="text-3" id="input-keywords"  name="" >           
+                       
+            <button class="butt-3-repl" id="btn-replace">
+                REPLASE
+            </button>            
+            <input type="text" class="text-replace" id="input-replace"  name=""> 
         </div>
 
         <div>
             <div class="block" > 
-                <label for="" class="label1">Вставь список сюда:</label>
-                <textarea name="" class="text-1" id="" cols="84" rows="9" autofocus></textarea>
-                <button class="butt-1-1" id="btn">ALL KEYWORD TWO AREAS</button>
-                <button class="butt-1" id="btn">STRICT KEY TWO AREAS</button> 
-               
+                <label for="in-list" class="label1">
+                    Вставь список сюда:
+                </label>
+                <textarea
+                    name=""
+                    class="text-1"
+                    id="incoming-list"
+                    cols="84"
+                    rows="9"
+                    autofocus>
+                </textarea>
+                <button class="butt-1-1" id="btn-two-areas">
+                    ALL KEYWORD TWO AREAS
+                </button>
+                <button class="butt-1" id="btn-strict-key">
+                    STRICT KEY TWO AREAS
+                </button>               
             </div>
 
-        
-
             <div class="block">
-                <label for="" class="label1">Данные  c ключевым  словом:</label>
-                <textarea name="" class="text-2" id=""cols="84" rows="8"></textarea>
-                <button class="butt-2" id="btn">WITH KEYWORDS</button> 
+                <label for="with-keywords" class="label1">
+                    Данные c ключевым словом:
+                </label>
+                <textarea 
+                    name="" 
+                    class="text-2" 
+                    id="with-keywords"
+                    cols="84" 
+                    rows="8">                  
+                </textarea>
+                <button class="butt-2" id="btn-with-keywords">
+                    WITH KEYWORDS
+                </button> 
             </div>
 
             <div class="block"> 
-                <label for="" class="labl1"></label>Данные без ключевого слова:</label>
-                <textarea name="" class="text-4" id=""cols="84" rows="8"></textarea>
-                <button class="butt-4" id="btn"> WITHOUT KEYWORD</button> 
+                <label for="without-keywords" class="labl1">
+                    Данные без ключевого слова:
+                </label>
+                <textarea 
+                    name="" 
+                    class="text-4" 
+                    id="without-keywords"
+                    cols="84" 
+                    rows="8">                
+                </textarea>
+                <button class="butt-4" id="btn-without-keywords">
+                    WITHOUT KEYWORD
+                </button> 
             </div>
         </div>
 
@@ -45,40 +81,52 @@
         <button id="del">clear local storage</button>
         
         <div class="text-5_7">
-
-            <p class="text-5_0"> ALL KEYWORDS TWO AREAS:
+            <p class="text-5_0">
+                кнопка ALL KEYWORDS TWO AREAS:
                 выводит в поле "Данные с ключевым  словом" данные, содержащие
                 ключевые значения. И одновременно выводит данные
-                без ключевых значений в поле "Данные без ключевого слова". <br>
-                Чтобы вывести список включающий только уникальные строки(исключить
-                дубликаты) без 
-                дополнительных изменений этого текста, нужно
-                в первое поле для ввода ключевых слов ввести набор символов который
-                точно нигде в тексте не встречается, например кучу звёздочек и т.п.
-                </p>
+                без ключевых значений в поле "Данные без ключевого слова".
+                <br>
+                Чтобы вывести список включающий только уникальные строки
+                (исключить дубликаты) БЕЗ ДОПОЛНИТЕЛЬНЫХ ИЗМЕНЕНИЙ этого текста,
+                 нужно в первое поле для ввода ключевых слов ввести набор 
+                 символов который точно нигде в тексте не встречается, например 
+                 несколько звёздочек и т.п.
+            </p>
 
-            <p class="text-5">STRICT KEY TWO AREAS:
-           добавляет в поле "Данные с ключевым  словом" данные, включающие
-            точные значения конкретных отдельных ячеек таблицы, записанному 
-            в ячейке полностью либо по последним символам этих значений. И одновременно вставляет входящий список
-            без этих данных в поле "Данные без ключевого слова". Для такой же сортировки по
-            крайнему правому столбцу нужно копировать данные из таблицы вместе со
-            следующим пустым столбцом. </p>
+            <p class="text-5">
+                кнопка STRICT KEY TWO AREAS:
+                добавляет в поле "Данные с ключевым  словом" данные, включающие
+                точные значения конкретных отдельных ячеек таблицы, записанных
+                в ячейке полностью либо по последним символам этих значений.
+                И одновременно вставляет список
+                без этих данных в поле "Данные без ключевого слова".
+                Для такой же сортировки по
+                крайнему правому столбцу нужно копировать данные из таблицы 
+                вместе со следующим пустым столбцом.
+            </p>
 
-        <p class="text-6">WITH KEYWORDS: вставляет данные содержащие все ключи в поле 
-            "Данные  с ключевым  словом".</p> 
-        <p class="text-6">WITHOUT KEYWORDS: выводит список без данных, содержащих один
-            проверочный ключ в поле "Данные без ключевого слова". (Эта функция временно недоступна. Работает
-            как предыдущая кнопка).
-        </p>
+            <p class="text-6">
+                кнопка WITH KEYWORDS: вставляет данные содержащие
+                все ключи в поле "Данные  с ключевым  словом".
+            </p> 
 
-        <p class="text-7">Все кнопки выводят только уникальные строки. <br> С незаполненным полями для ввода
-            ключей выводится просто весь список, исключая дубликаты.
-        </p>
+            <p class="text-6">
+                WITHOUT KEYWORDS: выводит список без данных, содержащих
+                проверочные ключи в поле "Данные без ключевого слова".
+            </p>
+
+            <p class="text-7">
+                Все кнопки выводят только уникальные строки.
+            </p>
         </div>
 
-        <footer><h3 class="h3">SORTER PRO</h3></footer>
+        <footer>
+            <h3 class="h3">
+                SORTER PRO
+            </h3>
+        </footer>
     
-        <script src="main.js"></script>
+        <script src="main1.js"></script>
     </body>
 </html>
