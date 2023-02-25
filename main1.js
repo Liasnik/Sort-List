@@ -128,13 +128,20 @@ function replaceName() {
     const arrayNewValues = newValues.split(' ');
 
     function replaceValues(array, targetArr, replacementArr) {
-        for (let i = 0; i < targetArr.length; i++) {
-            for (let j = 0; j < array.length; j++) {
-            array[j] = array[j].replace(`${targetArr[i]}\t`,
-            `${replacementArr[i]}\t`);
-            }
-        } 
-        return array;
+        if (targetArr.length !== replacementArr.length) {
+           alert('Разное количество введённых значений! Введите корректные данные!')
+        } else {
+       
+            for (let i = 0; i < targetArr.length; i++) {
+                for (let j = 0; j < array.length; j++) {
+                    array[j] = array[j].replace(
+                        `${targetArr[i]}\t`,
+                        `${replacementArr[i]}\t`
+                    );
+                }
+            }          
+            return array;
+        }
     }
 
     const newArr = replaceValues(uniqArray, arrayKeywords, arrayNewValues);
